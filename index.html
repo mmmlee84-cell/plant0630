@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>초록일지 — 내 식물 돌봄 노트</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="pj-root">
+    <div class="pj-wrap">
+
+      <!-- 헤더 -->
+      <header class="pj-head">
+        <div class="pj-brand">
+          <svg class="pj-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="var(--surface-2)" stroke="var(--ink)" stroke-opacity=".12" />
+            <path d="M14 32 C14 18 26 12 36 12 C36 26 26 34 16 34 Z" fill="var(--leaf)" />
+            <path d="M18 30 C24 24 30 20 34 18" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7" />
+            <circle cx="33" cy="33" r="4" fill="var(--water)" />
+          </svg>
+          <div>
+            <div class="pj-title">초록일지</div>
+            <div class="pj-tag">사진으로 기록하고, 물주기를 놓치지 않게</div>
+          </div>
+        </div>
+        <div class="pj-todaychip" id="todayChip">
+          <span class="pj-dot"></span>
+          <span id="todayChipText">불러오는 중…</span>
+        </div>
+      </header>
+
+      <div class="pj-rule"></div>
+      <p class="pj-seednote" id="seedNote" hidden>
+        예시 식물 3개로 시작했어요. 카드를 열어 내 식물로 바꾸거나 삭제하고, 새 식물을 추가해보세요.
+      </p>
+
+      <!-- 오늘 할 일 -->
+      <p class="pj-eyebrow">오늘 할 일</p>
+      <div class="pj-today" id="todayList"></div>
+
+      <!-- 내 식물 -->
+      <p class="pj-eyebrow" id="plantsEyebrow">내 식물</p>
+      <div class="pj-grid" id="plantGrid"></div>
+
+      <div class="pj-foot">초록일지 시제품 · 기록은 이 브라우저에 자동 저장됩니다</div>
+    </div>
+  </div>
+
+  <!-- 모달이 들어갈 자리 -->
+  <div id="modalRoot"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
